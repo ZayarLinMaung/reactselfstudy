@@ -1,38 +1,148 @@
-.App {
+body {
+  background: url("images/1318047.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  position: sticky;
+  z-index: 2;
+  font-size: 50px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 30px;
   color: white;
+  background-color: black;
+  opacity: 0.75;
+  margin-top: 0;
+  top: -10px;
+}
+.users {
+  position: static;
+  transform: translatex(20%);
+  width: 70vw;
+  display: grid;
+  grid-template-areas: "pic right";
+  grid-template-columns: 300px 1fr;
+  justify-content: start;
+  align-items: center;
+  background-color: grey;
+  opacity: 0.7;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px black;
+  border-radius: 30px 0px 30px 0px;
+  margin: 30px;
+  margin-right: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  width: 250px;
+  height: 250px;
+  border-radius: 1000px;
+  border: 10px solid black;
+  grid-area: pic;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+  display: block;
+  background-image: url('images/user.png');
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right {
+  grid-area: right;
+  display: grid;
+  grid-template-areas: 
+    "tp"
+    "bot";
+  gap: 10px;
+}
+
+.tp {
+  grid-area: tp;
+  display: block;
+  justify-content: start;
+}
+
+.bot {
+  grid-area: bot;
+  display: block;
+  justify-content: start;
+}
+
+.medalGold{
+  font-size: 50px;
+  color: gold;
+  margin-right: 30px;
+}
+
+.medalSilver{
+  font-size: 50px;
+  color: silver;
+  margin-right: 30px;
+}
+
+.medalBronze{
+  font-size: 50px;
+  color: rgb(247, 172, 59);
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  .medalGold{
+    font-size: 50px;
+    color: gold;
+    margin: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .medalSilver{
+    font-size: 50px;
+    color: silver;
+    margin: 30px;
+  }
+  
+  .medalBronze{
+    font-size: 50px;
+    color: rgb(247, 172, 59);
+    margin: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .title {
+    position: sticky;
+    width: 100vw;
+    z-index: 2;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background-color: black;
+    opacity: 0.75;
+    margin-top: 0;
+    top: -10px;
+  }
+  .users {
+    position: static;
+    transform: translatex(20%);
+    width: 70vw;
+    display: grid;
+    grid-template-areas: "pic"
+                         "right";
+    grid-template-rows: 300px 1fr;
+    justify-content: start;
+    align-items: center;
+    background-color: grey;
+    opacity: 0.7;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 30px;
+    margin: 30px;
+    margin-right: 0px;
+  }
+  .tp {
+    width: 300px;
   }
 }
